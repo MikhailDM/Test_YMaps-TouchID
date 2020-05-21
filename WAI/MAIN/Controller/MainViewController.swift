@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import LocalAuthentication
 
 class MainViewController: UIViewController {
 //MARK: - OUTLETS
@@ -31,6 +32,31 @@ class MainViewController: UIViewController {
     
  //MARK: - ACTIONS
     @IBAction func checkAndGoButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "mapSegue", sender: .none)
+        let context = LAContext()
+        var error: NSError?
+
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Identify yourself!"
+
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                [weak self] success, authenticationError in
+
+                DispatchQueue.main.async {
+                    if success {
+                        //self?.unlockSecretMessage()
+                        print("ID PASS")
+                    } else {
+                        print("ID FAILED")
+                    }
+                }
+            }
+        } else {
+            // no biometry
+        }
+        
+        
+        
+        
+        //performSegue(withIdentifier: "mapSegue", sender: .none)
     }
 }

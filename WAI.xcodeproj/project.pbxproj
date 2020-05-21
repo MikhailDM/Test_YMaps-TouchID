@@ -15,6 +15,7 @@
 		279DA8E22476925B005F205B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 279DA8E024768F20005F205B /* CoreLocation.framework */; };
 		279DA8E824769485005F205B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DA8E724769485005F205B /* MainViewController.swift */; };
 		279DA8EA24769490005F205B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DA8E924769490005F205B /* MapViewController.swift */; };
+		279DA8ED24769869005F205B /* TouchIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DA8EC24769869005F205B /* TouchIDManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		279DA8E024768F20005F205B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		279DA8E724769485005F205B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		279DA8E924769490005F205B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		279DA8EC24769869005F205B /* TouchIDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		279DA8E32476945F005F205B /* MAIN */ = {
 			isa = PBXGroup;
 			children = (
+				279DA8EB2476984F005F205B /* Managers */,
 				279DA8E524769473005F205B /* Controller */,
 			);
 			path = MAIN;
@@ -112,6 +115,14 @@
 				279DA8E924769490005F205B /* MapViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		279DA8EB2476984F005F205B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				279DA8EC24769869005F205B /* TouchIDManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				279DA8C5247687AA005F205B /* AppDelegate.swift in Sources */,
+				279DA8ED24769869005F205B /* TouchIDManager.swift in Sources */,
 				279DA8C7247687AA005F205B /* SceneDelegate.swift in Sources */,
 				279DA8EA24769490005F205B /* MapViewController.swift in Sources */,
 				279DA8E824769485005F205B /* MainViewController.swift in Sources */,
@@ -335,6 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNVRX9T4P8;
 				INFOPLIST_FILE = WAI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,7 +355,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Mike-Dmitriev.WAI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -353,6 +366,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNVRX9T4P8;
 				INFOPLIST_FILE = WAI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,7 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Mike-Dmitriev.WAI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
