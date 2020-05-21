@@ -15,9 +15,11 @@ class MainViewController: UIViewController {
     @IBOutlet weak var checkAndGoButton: UIButton!
     
     
-    
 //MARK: - MANAGERS
-    //Manager
+    //TouchID Manager
+    var touchIDManager = TouchIDManager()
+    
+    //Manager !!!!!!!!!!!!!
     let locationManager = CLLocationManager()
     
     
@@ -28,38 +30,22 @@ class MainViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         //User location request
         locationManager.requestWhenInUseAuthorization()
-        //Current position
-        //locationManager.requestLocation()
+        //Delegate
+        touchIDManager.delegate = self
     }
+}
+
+
+
+
+//MARK: - EXTENSION. TouchIDManagerDelegate
+extension MainViewController: TouchIDManagerDelegate {   
     
-    
- //MARK: - ACTIONS
     @IBAction func checkAndGoButtonPressed(_ sender: UIButton) {
-        /*let context = LAContext()
-        var error: NSError?
-
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            let reason = "Identify yourself!"
-
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
-                [weak self] success, authenticationError in
-
-                DispatchQueue.main.async {
-                    if success {
-                        //self?.unlockSecretMessage()
-                        print("ID PASS")
-                    } else {
-                        print("ID FAILED")
-                    }
-                }
-            }
-        } else {
-            // no biometry
-        }*/
-        
-        
-        
-        
-        performSegue(withIdentifier: "mapSegue", sender: .none)
+        touchIDManager.touchRequest()
+        print("Button Pressed")
+    }
+    func segueToMap() {
+           performSegue(withIdentifier: "mapSegue", sender: .none)
     }
 }
