@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		274995192476CAFC00882DFD /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274995182476CAFC00882DFD /* MapManager.swift */; };
 		279DA8C5247687AA005F205B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DA8C4247687AA005F205B /* AppDelegate.swift */; };
 		279DA8C7247687AA005F205B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DA8C6247687AA005F205B /* SceneDelegate.swift */; };
 		279DA8CC247687AA005F205B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279DA8CA247687AA005F205B /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		22EC40CA63C132B91C281C53 /* Pods_WAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		274995182476CAFC00882DFD /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		279DA8C1247687AA005F205B /* WAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279DA8C4247687AA005F205B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		279DA8C6247687AA005F205B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		279DA8EB2476984F005F205B /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				274995182476CAFC00882DFD /* MapManager.swift */,
 				279DA8EC24769869005F205B /* TouchIDManager.swift */,
 			);
 			path = Managers;
@@ -138,7 +141,6 @@
 				DF338F9CB07B977232FDDD05 /* Pods-WAI.debug.xcconfig */,
 				66EAB6FCE9D346295C7E9E00 /* Pods-WAI.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -261,6 +263,7 @@
 				279DA8ED24769869005F205B /* TouchIDManager.swift in Sources */,
 				279DA8C7247687AA005F205B /* SceneDelegate.swift in Sources */,
 				279DA8EA24769490005F205B /* MapViewController.swift in Sources */,
+				274995192476CAFC00882DFD /* MapManager.swift in Sources */,
 				279DA8E824769485005F205B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -54,21 +54,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQD-DS-8gG" customClass="YMKMapView">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tWZ-Ib-KJI">
+                                <rect key="frame" x="177" y="418" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="OEy-ra-Sb3"/>
+                                    <constraint firstAttribute="height" constant="60" id="XNm-Dt-W0G"/>
+                                </constraints>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="FQD-DS-8gG" firstAttribute="leading" secondItem="AAA-xb-VY5" secondAttribute="leading" id="HHh-5Q-3Ba"/>
-                            <constraint firstItem="AAA-xb-VY5" firstAttribute="trailing" secondItem="FQD-DS-8gG" secondAttribute="trailing" id="hpU-OD-iK6"/>
-                            <constraint firstItem="AAA-xb-VY5" firstAttribute="bottom" secondItem="FQD-DS-8gG" secondAttribute="bottom" id="oge-Yy-lM8"/>
+                            <constraint firstItem="FQD-DS-8gG" firstAttribute="leading" secondItem="Wcm-fe-KYq" secondAttribute="leading" id="HHh-5Q-3Ba"/>
+                            <constraint firstItem="tWZ-Ib-KJI" firstAttribute="centerY" secondItem="Wcm-fe-KYq" secondAttribute="centerY" id="c36-KW-uU3"/>
+                            <constraint firstItem="tWZ-Ib-KJI" firstAttribute="centerX" secondItem="Wcm-fe-KYq" secondAttribute="centerX" id="gPP-vi-kQg"/>
+                            <constraint firstAttribute="trailing" secondItem="FQD-DS-8gG" secondAttribute="trailing" id="hpU-OD-iK6"/>
+                            <constraint firstAttribute="bottom" secondItem="FQD-DS-8gG" secondAttribute="bottom" id="oge-Yy-lM8"/>
                             <constraint firstItem="FQD-DS-8gG" firstAttribute="top" secondItem="AAA-xb-VY5" secondAttribute="top" id="xBR-AF-4Cb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AAA-xb-VY5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Мое местоположение" id="rfc-SH-oBt"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="tWZ-Ib-KJI" id="MPU-wG-r3c"/>
                         <outlet property="mapView" destination="FQD-DS-8gG" id="qzO-am-bhS"/>
                     </connections>
                 </viewController>

@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var checkAndGoButton: UIButton!
     
     
+    
 //MARK: - MANAGERS
     //Manager
     let locationManager = CLLocationManager()
@@ -27,6 +28,8 @@ class MainViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         //User location request
         locationManager.requestWhenInUseAuthorization()
+        //Current position
+        //locationManager.requestLocation()
     }
     
     
