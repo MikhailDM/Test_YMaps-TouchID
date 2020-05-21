@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="134.59821428571428"/>
         </scene>
-        <!--WHERE YOU ARE-->
+        <!--Мое местоположение-->
         <scene sceneID="wMl-zh-CJt">
             <objects>
                 <viewController id="PzI-FH-1x3" customClass="MapViewController" customModule="WAI" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +54,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="AAA-xb-VY5"/>
                     </view>
-                    <navigationItem key="navigationItem" title="WHERE YOU ARE" id="rfc-SH-oBt"/>
+                    <navigationItem key="navigationItem" title="Мое местоположение" id="rfc-SH-oBt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RfG-v2-a0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

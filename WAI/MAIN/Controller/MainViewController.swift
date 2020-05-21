@@ -7,15 +7,25 @@
 //
 
 import UIKit
+import CoreLocation
 
 class MainViewController: UIViewController {
+//MARK: - OUTLETS
     @IBOutlet weak var checkAndGoButton: UIButton!
     
     
+//MARK: - MANAGERS
+    //Manager
+    let locationManager = CLLocationManager()
+    
+    
+//MARK: - LOADING
     override func viewDidLoad() {
         super.viewDidLoad()
         //NanigationBar hide
         navigationController?.navigationBar.isHidden = true
+        //User location request
+        locationManager.requestWhenInUseAuthorization()
     }
     
     
@@ -23,16 +33,4 @@ class MainViewController: UIViewController {
     @IBAction func checkAndGoButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "mapSegue", sender: .none)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

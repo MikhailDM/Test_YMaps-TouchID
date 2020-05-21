@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>1</string>
+	<string>Данное приложение запрашивает доступ к Вашему местоположению</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>2</string>
+	<string>Данное приложение запрашивает доступ к Вашему местоположению</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
