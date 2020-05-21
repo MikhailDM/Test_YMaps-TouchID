@@ -16,9 +16,11 @@
 		279DA8E824769485005F205B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DA8E724769485005F205B /* MainViewController.swift */; };
 		279DA8EA24769490005F205B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DA8E924769490005F205B /* MapViewController.swift */; };
 		279DA8ED24769869005F205B /* TouchIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DA8EC24769869005F205B /* TouchIDManager.swift */; };
+		AA19BA811253BBC999B5B9B0 /* Pods_WAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22EC40CA63C132B91C281C53 /* Pods_WAI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22EC40CA63C132B91C281C53 /* Pods_WAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		279DA8C1247687AA005F205B /* WAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279DA8C4247687AA005F205B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		279DA8C6247687AA005F205B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		279DA8E724769485005F205B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		279DA8E924769490005F205B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		279DA8EC24769869005F205B /* TouchIDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDManager.swift; sourceTree = "<group>"; };
+		66EAB6FCE9D346295C7E9E00 /* Pods-WAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WAI.release.xcconfig"; path = "Target Support Files/Pods-WAI/Pods-WAI.release.xcconfig"; sourceTree = "<group>"; };
+		DF338F9CB07B977232FDDD05 /* Pods-WAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WAI.debug.xcconfig"; path = "Target Support Files/Pods-WAI/Pods-WAI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				279DA8E22476925B005F205B /* CoreLocation.framework in Frameworks */,
+				AA19BA811253BBC999B5B9B0 /* Pods_WAI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +55,7 @@
 				279DA8C3247687AA005F205B /* WAI */,
 				279DA8C2247687AA005F205B /* Products */,
 				279DA8DF24768F20005F205B /* Frameworks */,
+				95C8BEC35FD5E02B83AECF84 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				279DA8E024768F20005F205B /* CoreLocation.framework */,
+				22EC40CA63C132B91C281C53 /* Pods_WAI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,6 +132,16 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		95C8BEC35FD5E02B83AECF84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF338F9CB07B977232FDDD05 /* Pods-WAI.debug.xcconfig */,
+				66EAB6FCE9D346295C7E9E00 /* Pods-WAI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 279DA8D5247687AF005F205B /* Build configuration list for PBXNativeTarget "WAI" */;
 			buildPhases = (
+				CF46810A5A225E8F4E81D8D2 /* [CP] Check Pods Manifest.lock */,
 				279DA8BD247687AA005F205B /* Sources */,
 				279DA8BE247687AA005F205B /* Frameworks */,
 				279DA8BF247687AA005F205B /* Resources */,
+				8EF3EAA929BB84FCB659BCE2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +209,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8EF3EAA929BB84FCB659BCE2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WAI/Pods-WAI-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WAI/Pods-WAI-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WAI/Pods-WAI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF46810A5A225E8F4E81D8D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WAI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		279DA8BD247687AA005F205B /* Sources */ = {
@@ -342,6 +403,7 @@
 		};
 		279DA8D6247687AF005F205B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF338F9CB07B977232FDDD05 /* Pods-WAI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -361,6 +423,7 @@
 		};
 		279DA8D7247687AF005F205B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66EAB6FCE9D346295C7E9E00 /* Pods-WAI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
