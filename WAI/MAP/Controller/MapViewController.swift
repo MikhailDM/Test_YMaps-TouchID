@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import YandexMapKit
 
 class MapViewController: UIViewController {
+    @IBOutlet weak var mapView: YMKMapView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //NanigationBar hide
         navigationController?.navigationBar.isHidden = false
+        
+        
+        mapView.mapWindow.map.move(
+        with: YMKCameraPosition.init(target: YMKPoint(latitude: 55.751574, longitude: 37.573856), zoom: 15, azimuth: 0, tilt: 0),
+        animationType: YMKAnimation(type: YMKAnimationType.smooth, duration: 5),
+        cameraCallback: nil)
     }
 }

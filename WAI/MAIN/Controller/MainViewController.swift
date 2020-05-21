@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
     
  //MARK: - ACTIONS
     @IBAction func checkAndGoButtonPressed(_ sender: UIButton) {
-        let context = LAContext()
+        /*let context = LAContext()
         var error: NSError?
 
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
@@ -52,11 +52,11 @@ class MainViewController: UIViewController {
             }
         } else {
             // no biometry
-        }
+        }*/
         
         
         
         
-        //performSegue(withIdentifier: "mapSegue", sender: .none)
+        performSegue(withIdentifier: "mapSegue", sender: .none)
     }
 }
