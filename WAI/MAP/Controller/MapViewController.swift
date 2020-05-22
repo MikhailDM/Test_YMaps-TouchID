@@ -12,23 +12,24 @@ import CoreLocation
 
 
 class MapViewController: UIViewController {
-    //MARK: - OUTLETS
+//MARK: - OUTLETS
     @IBOutlet weak var mapView: YMKMapView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
-    //MARK: - MANAGERS
+//MARK: - MANAGERS
     private let locationManager = CLLocationManager()
-    private let mapManager = MapManager()
+        
     
-    
-    //MARK: - LOADING
+//MARK: - LOADING
     override func viewDidLoad() {
         super.viewDidLoad()
         //NanigationBar hide
         navigationController?.navigationBar.isHidden = false
         //Self as delegate for Location
         locationManager.delegate = self
+        //User location permission request
+        locationManager.requestWhenInUseAuthorization()
         //Request current location
         locationManager.requestLocation()
         //Activity indicator
@@ -37,16 +38,21 @@ class MapViewController: UIViewController {
 }
 
 
+
+//MARK: - EXTENSION. CLLocationManagerDelegate
 extension MapViewController: CLLocationManagerDelegate {
+    //SetUp location
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
             setUpMap(location: YMKPoint(latitude: location.coordinate.latitude,
                                         longitude: location.coordinate.longitude))
         }
     }
+    //Error
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
+    //Zooming camera
     private func setUpMap(location: YMKPoint) {
         activityIndicator.stopAnimating()
         mapView.mapWindow.map.mapObjects.addPlacemark(with: location)

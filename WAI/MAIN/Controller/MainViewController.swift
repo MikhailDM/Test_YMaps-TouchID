@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import CoreLocation
-import LocalAuthentication
 
 class MainViewController: UIViewController {
 //MARK: - OUTLETS
@@ -19,17 +17,12 @@ class MainViewController: UIViewController {
     //TouchID Manager
     var touchIDManager = TouchIDManager()
     
-    //Manager !!!!!!!!!!!!!
-    let locationManager = CLLocationManager()
-    
     
 //MARK: - LOADING
     override func viewDidLoad() {
         super.viewDidLoad()
         //NanigationBar hide
         navigationController?.navigationBar.isHidden = true
-        //User location request
-        locationManager.requestWhenInUseAuthorization()
         //Delegate
         touchIDManager.delegate = self
     }
@@ -39,13 +32,14 @@ class MainViewController: UIViewController {
 
 
 //MARK: - EXTENSION. TouchIDManagerDelegate
-extension MainViewController: TouchIDManagerDelegate {   
-    
+extension MainViewController: TouchIDManagerDelegate {
+    //Button pressed
     @IBAction func checkAndGoButtonPressed(_ sender: UIButton) {
         touchIDManager.touchRequest()
         print("Button Pressed")
     }
     func segueToMap() {
-           performSegue(withIdentifier: "mapSegue", sender: .none)
+        //Segue to Map View if TouchID success. Logic in manager
+        performSegue(withIdentifier: "mapSegue", sender: .none)
     }
 }
