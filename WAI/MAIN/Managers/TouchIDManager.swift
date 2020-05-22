@@ -23,7 +23,7 @@ class TouchIDManager {
         var error: NSError?
 
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            let reason = "Необходима идентификация"
+            let reason = "Identification required"
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
                 DispatchQueue.main.async {
                     if success {
@@ -35,7 +35,28 @@ class TouchIDManager {
                 }
             }
         } else {
+            enterPassword()
             print("NO BIOMETRY")
+        }
+    }
+    //Password in case no biometry
+    private func enterPassword() {
+        let context = LAContext()
+        var error: NSError?
+        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
+            let reason = "Enter Password"
+            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, authenticationError in
+                DispatchQueue.main.async {
+                    if success {
+                        self.delegate?.segueToMap()
+                        print("PASSWORD PASS")
+                    } else {
+                        print("PASSWORD FAILED")
+                    }
+                }
+            }
+        } else {
+            print("NO PASSWORD")
         }
     }
 }
