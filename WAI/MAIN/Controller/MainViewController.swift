@@ -21,10 +21,15 @@ class MainViewController: UIViewController {
 //MARK: - LOADING
     override func viewDidLoad() {
         super.viewDidLoad()
-        //NanigationBar hide
-        navigationController?.navigationBar.isHidden = true
         //Delegate
         touchIDManager.delegate = self
+        //Button's Font Scale        
+        checkAndGoButton.titleLabel!.adjustsFontSizeToFitWidth = true
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        //NanigationBar hide
+        navigationController?.navigationBar.isHidden = true
     }
 }
 
