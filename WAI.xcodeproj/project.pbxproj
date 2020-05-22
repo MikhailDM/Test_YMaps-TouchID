@@ -70,14 +70,10 @@
 		279DA8C3247687AA005F205B /* WAI */ = {
 			isa = PBXGroup;
 			children = (
+				27FED6842477D49A00BF46A1 /* GLOBAL */,
 				279DA8E32476945F005F205B /* MAIN */,
 				279DA8E424769468005F205B /* MAP */,
-				279DA8C4247687AA005F205B /* AppDelegate.swift */,
-				279DA8C6247687AA005F205B /* SceneDelegate.swift */,
-				279DA8CA247687AA005F205B /* Main.storyboard */,
-				279DA8CD247687AF005F205B /* Assets.xcassets */,
-				279DA8CF247687AF005F205B /* LaunchScreen.storyboard */,
-				279DA8D2247687AF005F205B /* Info.plist */,
+				27FED6872477D4E100BF46A1 /* SUPPORT */,
 			);
 			path = WAI;
 			sourceTree = "<group>";
@@ -130,6 +126,42 @@
 				279DA8EC24769869005F205B /* TouchIDManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		27FED6842477D49A00BF46A1 /* GLOBAL */ = {
+			isa = PBXGroup;
+			children = (
+				27FED6862477D4C400BF46A1 /* View */,
+				27FED6852477D4AB00BF46A1 /* Controller */,
+			);
+			path = GLOBAL;
+			sourceTree = "<group>";
+		};
+		27FED6852477D4AB00BF46A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				279DA8C4247687AA005F205B /* AppDelegate.swift */,
+				279DA8C6247687AA005F205B /* SceneDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		27FED6862477D4C400BF46A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				279DA8CA247687AA005F205B /* Main.storyboard */,
+				279DA8CF247687AF005F205B /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		27FED6872477D4E100BF46A1 /* SUPPORT */ = {
+			isa = PBXGroup;
+			children = (
+				279DA8CD247687AF005F205B /* Assets.xcassets */,
+				279DA8D2247687AF005F205B /* Info.plist */,
+			);
+			path = SUPPORT;
 			sourceTree = "<group>";
 		};
 		95C8BEC35FD5E02B83AECF84 /* Pods */ = {
@@ -407,7 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNVRX9T4P8;
-				INFOPLIST_FILE = WAI/Info.plist;
+				INFOPLIST_FILE = WAI/SUPPORT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -427,7 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BNVRX9T4P8;
-				INFOPLIST_FILE = WAI/Info.plist;
+				INFOPLIST_FILE = WAI/SUPPORT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
