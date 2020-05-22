@@ -19,19 +19,16 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="tSo-XQ-u5f">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2u-39-frh">
-                                <rect key="frame" x="11" y="252" width="392" height="392"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="N2u-39-frh" secondAttribute="height" multiplier="1:1" id="87d-zc-ZML"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
-                                <state key="normal" title="WHERE AM I?" backgroundImage="Oval"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2u-39-frh">
+                                <rect key="frame" x="33" y="416" width="348" height="64"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                <state key="normal" title="&lt;WHERE AM I?&gt;"/>
                                 <connections>
                                     <action selector="checkAndGoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="etg-fC-bGx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Press to find Your location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Yc-Iz-gJv">
-                                <rect key="frame" x="66.5" y="98" width="281.5" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="▼ Press to find Your location ▼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Yc-Iz-gJv">
+                                <rect key="frame" x="34.5" y="98" width="345" height="32"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -138,6 +135,5 @@
     </scenes>
     <resources>
         <image name="BG" width="414" height="896"/>
-        <image name="Oval" width="392" height="392"/>
     </resources>
 </document>
